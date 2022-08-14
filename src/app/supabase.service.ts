@@ -18,6 +18,13 @@ export class SupabaseService {
     this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);
   }
 
+  get members() {
+    return this.supabase
+      .from('employee_projects')
+      .select('employee_projects!inner(*), projects!inner(*)')
+      .eq('employee.name', 'Employee1')
+  }
+
   get user() {
     return this.supabase.auth.user();
   }

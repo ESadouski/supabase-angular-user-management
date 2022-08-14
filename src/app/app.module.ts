@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth.component';
 import { AccountComponent } from './account.component';
 import { AvatarComponent } from './avatar.component';
+import { MembersComponent } from './members';
 
 @NgModule({
-  declarations: [AppComponent, AuthComponent, AccountComponent, AvatarComponent],
+  declarations: [AppComponent, MembersComponent, AuthComponent, AccountComponent, AvatarComponent],
   imports: [BrowserModule],
   bootstrap: [AppComponent],
 })
