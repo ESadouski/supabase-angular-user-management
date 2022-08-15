@@ -1,0 +1,25 @@
+@import "./../../assets/scss/variables";
+header {
+  background: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.5s;
+  height:100px;
+
+.header-wrap {
+  display: flex;
+   align-items: flex-start;
+  margin: 50px;
+}
+button {
+    background: none;
+    @include btn;
+    width: auto;
+    &:hover {
+
+      color: $dark-gray;
+    }
+  }
+}
