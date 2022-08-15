@@ -18,8 +18,11 @@ button {
     @include btn;
     width: auto;
     &:hover {
-
       color: $dark-gray;
     }
+
   }
+  .active {
+      color: $dark-gray;
+    }
 }

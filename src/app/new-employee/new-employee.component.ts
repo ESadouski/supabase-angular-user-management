@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './new-employee.component.html',
   styleUrls: ['./new-employee.component.scss']
 })
-export class NewEmployeeComponent implements OnInit {
+export class NewEmployeeComponent  {
  public formFields= [
     {
       id: 'name',
@@ -37,8 +37,7 @@ export class NewEmployeeComponent implements OnInit {
   constructor( public route: Router,
     private fb: FormBuilder,) { }
 
-  ngOnInit(): void {
-  }
+
   public editForm = this.fb.group({
     name: [
       null,

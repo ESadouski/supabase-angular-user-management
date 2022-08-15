@@ -1,0 +1,63 @@
+@import "./../../assets/scss/variables";
+form {
+  h2 {
+    @include fontH2;
+    margin-right: 20px;
+  }
+  @include form;
+  gap:10px;
+  padding: 30px;
+  input {
+    @include input;
+    min-width: 100px;
+    height: 50px;
+    border-radius: $small-border-radius;
+    background: $white;
+  }
+}
+
+  button {
+    @include btn;
+
+    &:hover {
+      @include hover;
+    }}
+
+  .save-btn {
+    color: $white;
+    background: $light-blue;
+
+    &:hover {
+      background: #587eb5;
+    }
+    &:disabled {
+       @include disabled;
+      color: $white;
+      background: $opacity-blue;
+      &:hover {
+        color: $white;
+        background: $opacity-blue;
+      }
+      }
+   }
+  .cancel-btn {
+    color: $white;
+    background: $light-red;
+
+    &:hover {
+      background: $red;
+    }
+    &:disabled {
+      @include disabled;
+      color: $white;
+      background: $opacity-red;
+      &:hover {
+        color: $white;
+        background: $opacity-red;
+      }
+    }
+  }
+
+.mat-form-field {
+    min-width: 250px;
+}

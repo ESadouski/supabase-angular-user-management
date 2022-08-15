@@ -1,1 +1,13 @@
-<p>new-project works!</p>
+<form [formGroup]="newProject" class="edit-form">
+  <h2>Add new project: </h2>
+  <mat-form-field *ngFor="let formField of formFields">
+    <mat-label #label>{{formField.label}}</mat-label>
+    <input matInput id="{{ formField.id }}" autocomplete="off" type="{{ formField.type }}"
+      formControlName="{{ formField.id }}" />
+  </mat-form-field>
+
+  <div> <button [disabled]="!newProject.valid" class="save-btn" mat-flat-button color="primary">save</button>
+    <button class="cancel-btn" mat-flat-button>cancel</button>
+  </div>
+
+</form>

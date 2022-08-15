@@ -18,15 +18,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterPipe } from './pipes/filter.pipe';
 @NgModule({
-  declarations: [AppComponent, MembersComponent, AuthComponent, AccountComponent, AvatarComponent, EmployeeComponent,
+  declarations: [
+    FilterPipe,
+    AppComponent, MembersComponent, AuthComponent, AccountComponent, AvatarComponent, EmployeeComponent,
     TechnologiesComponent,
     ProjectsComponent,
     NewItemComponent,
     CardComponent,
     NewEmployeeComponent,
     NewProjectComponent,MenuComponent,],
-  imports: [BrowserModule, MatFormFieldModule,FormsModule,ReactiveFormsModule,MatInputModule, AppRoutingModule],
+  imports: [BrowserModule, MatFormFieldModule,FormsModule,ReactiveFormsModule,MatInputModule, AppRoutingModule, BrowserAnimationsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

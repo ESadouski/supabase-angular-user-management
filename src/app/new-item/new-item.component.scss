@@ -1,27 +1,51 @@
 @import "../../assets/scss/variables";
 .new-item {
   @include input;
+  border:2px solid $opacity-gray;
 }
-
+ h2 {
+    @include fontH2;
+    margin:0 20px;
+  }
 .input-wrap {
 display: flex;
 align-items: baseline;
-margin: 20px 0;
+padding: 30px;
+background-color: #f5f5f5;
 p{
   margin: 0;
 margin-right: 50px;
 @include fontH4
 }
 }
-button {
-  @include btn;
-  margin: 0 10px;
-  padding: 0;
-      border:2px solid $opacity-gray;
-  height: 44px;
-  border-radius: $small-border-radius;
- &:hover {border:2px solid $opacity-black;}
-  &:active {
-    height: 38px;
-  }
-}
+ button {
+    @include btn;
+
+    &:hover {
+      @include hover;
+    }}
+
+.save-btn {
+    color: $white;
+    background: $light-blue;
+
+    &:hover {
+      background: #587eb5;
+    }
+    &:disabled {
+       @include disabled;
+      color: $white;
+      background: $opacity-blue;
+      &:hover {
+        color: $white;
+        background: $opacity-blue;
+      }
+      }
+   }
+  .cancel-btn {
+    color: $white;
+    background: $light-red;
+
+    &:hover {
+      background: $red;
+    }}

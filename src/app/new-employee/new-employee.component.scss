@@ -1,19 +1,21 @@
 @import "./../../assets/scss/variables";
 form {
-  h3 {
-    @include fontH3;
+  h2 {
+    @include fontH2;
+    margin-right: 20px;
   }
   @include form;
-  min-width: 100%;
   gap:10px;
   padding: 30px;
   input {
     @include input;
     min-width: 100px;
-height: 50px;
-  border-radius: $small-border-radius;
-     background: $white;
-  }}
+    height: 50px;
+    border-radius: $small-border-radius;
+    background: $white;
+  }
+}
+
   button {
     @include btn;
 
@@ -29,7 +31,7 @@ height: 50px;
       background: #587eb5;
     }
     &:disabled {
-      // @include disabled;
+       @include disabled;
       color: $white;
       background: $opacity-blue;
       &:hover {
@@ -38,30 +40,23 @@ height: 50px;
       }
       }
    }
-//   .cancel-btn {
-//     color: $white;
-//     background: $light-red;
+  .cancel-btn {
+    color: $white;
+    background: $light-red;
 
-//     &:hover {
-//       background: $red;
-//     }
-//     &:disabled {
-//       @include disabled;
-//       color: $white;
-//       background: $opacity-red;
-//       &:hover {
-//         color: $white;
-//         background: $opacity-red;
-//       }
-//     }
-//   }
-
-// .edited {
-//   font-size: $fontSizeH4;
-//   color: $green;
-// }
+    &:hover {
+      background: $red;
+    }
+    &:disabled {
+      @include disabled;
+      color: $white;
+      background: $opacity-red;
+      &:hover {
+        color: $white;
+        background: $opacity-red;
+      }
+    }
+  }
 .mat-form-field {
-
     min-width: 250px;
-
 }

@@ -4,13 +4,8 @@ import { SupabaseService } from './supabase.service';
 @Component({
   selector: 'app-root',
   template: `
-    <div class="container" style="padding: 50px 0 100px 0">
-      <members></members>
-<!--      <app-account *ngIf="session; else auth" [session]="session"></app-account>-->
-<!--      <ng-template #auth>-->
-<!--        <app-auth></app-auth>-->
-<!--      </ng-template>-->
-    </div>
+   <app-menu></app-menu>
+<router-outlet></router-outlet>
   `,
 })
 export class AppComponent implements OnInit {
