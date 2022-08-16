@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Profile, SupabaseService } from './supabase.service';
+import { Profile, SupabaseService } from './services/supabase.service';
 import { Session } from '@supabase/supabase-js';
 
 @Component({

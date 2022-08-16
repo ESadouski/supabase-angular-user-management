@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AuthChangeEvent, createClient, Session, SupabaseClient } from '@supabase/supabase-js';
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 
 export interface Profile {
   username: string;
@@ -72,4 +72,22 @@ export class SupabaseService {
   uploadAvatar(filePath: string, file: File) {
     return this.supabase.storage.from('avatars').upload(filePath, file);
   }
+
+async getAllEmployees(){
+ return await this.supabase
+  .from('employee')
+  .select('*,manager(*),employee_projects(project_id(name)),employee_technology(technology_id(name))')
+}
+
+async getAllTechnologies(){
+return await this.supabase
+  .from('technology')
+  .select('*,employee_technology(employee_id(name))')
+}
+
+async getAllProjects(){
+return await this.supabase
+  .from('projects')
+  .select('*,employee_projects(employee_id(name))')
+}
 }

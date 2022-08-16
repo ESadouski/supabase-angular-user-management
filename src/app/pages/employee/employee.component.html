@@ -1,7 +1,10 @@
 <div class="container">
   <app-new-employee></app-new-employee>
   <div class="employee-tab">
-    <h2>Employee:</h2>
-    <app-card></app-card>
+    <button (onclick)="getEmployees()">Employees:</button>
+    <div *ngIf="employees" class="card-wrap">
+      <app-card *ngFor="let employee of employees" [employee]="employee"></app-card>
+    </div>
+
   </div>
 </div>

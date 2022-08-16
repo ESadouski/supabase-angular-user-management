@@ -1,7 +1,9 @@
 <div>
   <app-new-project></app-new-project>
-  <div class="technologies-tab">
-    <h2>Projects:</h2>
-    <app-card></app-card>
+  <div class="project-tab">
+    <button>Projects:</button>
+    <div *ngIf="projects" class="card-wrap">
+      <app-card *ngFor="let project of projects" [project]="project"></app-card>
+    </div>
   </div>
 </div>

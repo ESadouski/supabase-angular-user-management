@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ROUTH_PATHS } from './shared/constants/constants';
 
-import { EmployeeComponent } from './employee/employee.component';
-import { TechnologiesComponent } from './technologies/technologies.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { EmployeeComponent } from './pages/employee/employee.component';
+import { TechnologiesComponent } from './pages/technologies/technologies.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
 
 const routes: Routes = [
 

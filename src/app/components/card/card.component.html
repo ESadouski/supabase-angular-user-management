@@ -1,3 +1,6 @@
 <div class="card">
-  <p *ngFor="let field of fields | filter:path">{{field}}</p>
+  <p *ngFor="let field of fields | filter:path">{{field}}: <span *ngIf="employee">{{employee | filterRes:field}}</span>
+    <span *ngIf="technology">{{technology | filterRes:field}}</span>
+    <span *ngIf="project">{{project | filterRes:field}}</span>
+  </p>
 </div>

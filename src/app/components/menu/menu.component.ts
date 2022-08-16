@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ROUTH_PATHS } from '../shared/constants/constants';
+import { ROUTH_PATHS } from '../../shared/constants/constants';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -8,26 +8,20 @@ import { ROUTH_PATHS } from '../shared/constants/constants';
 })
 export class MenuComponent  {
   constructor(private router: Router) { }
-  employee = true
-  technology = false
-  project = false
+  public index = window.location.href.lastIndexOf('/')
+   public path = window.location.href.slice(this.index + 1)
+
    public openEmployee(): void {
     this.router.navigate([ROUTH_PATHS.EMPLOYEE]);
- this.employee = true
-  this.technology = false
-  this.project = false
+  this.path = 'employee'
   }
    public openTechnologies(): void {
     this.router.navigate([ROUTH_PATHS.TECHNOLOGY]);
-    this.employee = false
-    this.technology = true
-    this.project = false
+   this.path = 'technologies'
   }
    public openProjects(): void {
     this.router.navigate([ROUTH_PATHS.PROJECTS]);
-    this.employee = false
-    this.technology = false
-    this.project = true
+   this.path ='projects'
   }
 
 }

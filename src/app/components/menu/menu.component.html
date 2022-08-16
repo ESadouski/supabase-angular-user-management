@@ -1,7 +1,7 @@
 <header>
   <div class="header-wrap">
-    <button [ngClass]="{active:employee}" (click)="openEmployee()">employee</button>
-    <button [ngClass]="{active:technology}" (click)="openTechnologies()">technology</button>
-    <button [ngClass]="{active:project}" (click)=" openProjects()">project</button>
+    <button [ngClass]="{active:('employee'===path)}" (click)="openEmployee()">employee</button>
+    <button [ngClass]="{active:'technologies'===path}" (click)="openTechnologies()">technology</button>
+    <button [ngClass]="{active:'projects'===path}" (click)=" openProjects()">project</button>
   </div>
 </header>

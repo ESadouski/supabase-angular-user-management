@@ -21,6 +21,12 @@ export class NewEmployeeComponent  {
       formControlName: 'technology',
       type: 'text',
     },
+     {
+      id: 'projects',
+      label: 'projects',
+      formControlName: 'projects',
+      type: 'text',
+    },
     {
       id: 'experience',
       label: 'experience',
@@ -37,16 +43,14 @@ export class NewEmployeeComponent  {
   constructor( public route: Router,
     private fb: FormBuilder,) { }
 
-
   public editForm = this.fb.group({
     name: [
       null,
       [Validators.required],
     ],
     technology: [null, [Validators.required]],
-   manager: [null, [Validators.required]],
+    manager: [null, [Validators.required]],
     experience: [null, [Validators.required]],
+    projects: [null, [Validators.required]],
   });
-
-
 }
